@@ -44,7 +44,7 @@ async function getCharacterDetail(id: number): Promise<CharacterDetailType> {
     const birthdayStr2 = birthdayStr.replace('月', '/').replace('日', '');
 
     // "2021/02/04"
-    const releaseStr = $('tbody:has(tr td span:contains("基础资料")) tr:has(td[colspan="2"][rowspan="1"]) td:nth-child(2) > div').first().text();
+    const releaseStr = $('tbody tr:has(td:nth-of-type(1) > div > img):has(td:nth-of-type(2) > div):has(td:nth-child(3) > div > img)').first().text();
 
     return {
         birthday: new Date(birthdayStr2 + ' UTC+0800'),

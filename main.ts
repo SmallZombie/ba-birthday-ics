@@ -63,7 +63,7 @@ async function main() {
                 dtstamp: ics.dateToDateTime(new Date()),
                 dtstart: releaseStr,
                 rrule,
-                summary: item.name
+                summary: item.name + ' 生日'
             }
             ics.items.push(icsItem);
             needSaveICSInThisCycle = true;
